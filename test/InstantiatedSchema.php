@@ -1,6 +1,7 @@
 <?php
+namespace switch5php\model;
 require 'InstantiatedSchema.php';
-class InstantiatedSchemaTest extends PHPUnit_Framework_Testcase{
+class InstantiatedSchemaTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldGetRawArrayAndApplyToIt(){
 		$instance = new InstantiatedSchema(
 			mockSchema(),

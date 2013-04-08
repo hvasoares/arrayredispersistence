@@ -1,8 +1,9 @@
 <?php
+namespace switch5php\model;
 require 'CleanSchemaState.php';
 use \Mockery as m;
 
-class CleanSchemaStateTest extends PHPUnit_Framework_Testcase{
+class CleanSchemaStateTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldAddMethodToModel(){
 		$instance = new CleanSchemaState();
 		$model = m::mock('modelM');
@@ -10,7 +11,7 @@ class CleanSchemaStateTest extends PHPUnit_Framework_Testcase{
 		$instance->setModel($model);
 
 		$model->shouldReceive('setState')
-			->with(m::type('SchemaSettedState'))
+			->with(m::type('switch5php\model\SchemaSettedState'))
 			->times(1);
 
 		$assert = $this;

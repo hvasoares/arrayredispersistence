@@ -1,8 +1,9 @@
 <?php
+namespace switch5php\model;
 require_once 'SchemaSettedState.php';
 class CleanSchemaState{
 	public function __construct(){
-		$this->schema = new stdClass;
+		$this->schema = new \stdClass;
 	}
 	public function setModel($model){$this->model = $model;}
 	private function incrKey($value){
@@ -25,7 +26,7 @@ class CleanSchemaState{
 		return $this->model;
 	}
 
-	private function setStrategy(Closure $fn){
+	private function setStrategy(\Closure $fn){
 		$fn($this);
 		$this->model->setState(new SchemaSettedState(
 			$this->getSchema()

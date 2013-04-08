@@ -1,7 +1,8 @@
 <?php
+namespace switch5php\model;
 require_once 'TransientState.php';
 use \Mockery as m;
-class TransientStateTest extends PHPUnit_Framework_Testcase{
+class TransientStateTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldPassRawDataToPersistence(){
 		$si = m::mock('InstatiatedSchema');
 

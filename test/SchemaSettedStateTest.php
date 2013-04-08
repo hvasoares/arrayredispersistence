@@ -1,7 +1,8 @@
 <?php
+namespace switch5php\model;
 require_once 'SchemaSettedState.php';
 use \Mockery as m;
-class SchemaSettedStateTest extends PHPUnit_Framework_Testcase{
+class SchemaSettedStateTest extends \PHPUnit_Framework_Testcase{
 	public function testGivenASchemaShouldRetrieveFromRedis(){
 		$s = mockSchema();
 		$s->attrs = array(
@@ -17,7 +18,7 @@ class SchemaSettedStateTest extends PHPUnit_Framework_Testcase{
 			->andReturn($r)
 			->times(1);
 		$m->shouldReceive('setState')
-			->with(m::type('TransientState'))
+			->with(m::type('switch5php\model\TransientState'))
 			->times(1);
 
 		$instance = new SchemaSettedState($s);

@@ -1,4 +1,5 @@
 <?php
+namespace switch5php\model;
 require 'validations.php';
 use \switch5\validations as v;
 class InstantiatedSchema{

@@ -1,4 +1,5 @@
 <?php
+namespace switch5php\model;
 require_once 'CleanSchemaState.php';
 class Model{
 	public function __construct($redis){

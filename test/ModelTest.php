@@ -1,9 +1,10 @@
 <?php
+namespace switch5php\model;
 require 'Model.php';
 
 use \Mockery as m;
 
-class ModelTest extends PHPUnit_Framework_Testcase{
+class ModelTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldBuildAModelFromAStrategy(){
 		$r = m::mock('redism');
 		$s = m::mock('state');
