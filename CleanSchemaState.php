@@ -1,5 +1,5 @@
 <?php
-namespace switch5php\model;
+namespace switch5\modelmapping;
 require_once 'SchemaSettedState.php';
 class CleanSchemaState{
 	public function __construct(){
@@ -26,7 +26,7 @@ class CleanSchemaState{
 		return $this->model;
 	}
 
-	private function setStrategy(\Closure $fn){
+	private function setSchema(\Closure $fn){
 		$fn($this);
 		$this->model->setState(new SchemaSettedState(
 			$this->getSchema()

@@ -1,0 +1,3 @@
+[submodule "libs/commons"]
+	path = libs/commons
+	url = https://hvasoares.unfuddle.com/git/hvasoares_switch5phpcommons

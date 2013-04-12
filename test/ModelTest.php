@@ -1,5 +1,5 @@
 <?php
-namespace switch5php\model;
+namespace switch5\modelmapping;
 require 'Model.php';
 
 use \Mockery as m;

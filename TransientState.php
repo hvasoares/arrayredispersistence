@@ -1,5 +1,5 @@
 <?
-namespace switch5php\model;
+namespace switch5\modelmapping;
 require_once 'validations.php';
 use \switch5\validations as v;
 class TransientState{
@@ -13,6 +13,7 @@ class TransientState{
 		$this->p = $val;
 	}
 	private function persists(){
+		$p = v\returnSecondIfNull($this->p,new Persistence($this->model->getRedis()));
 		$id = is_null($this->schemaI->getId()) ?
 			$this->model->getRedis()->incr(
 				$this->schemaI->getIncKey()

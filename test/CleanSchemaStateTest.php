@@ -1,5 +1,5 @@
 <?php
-namespace switch5php\model;
+namespace switch5\modelmapping;
 require 'CleanSchemaState.php';
 use \Mockery as m;
 
@@ -11,13 +11,13 @@ class CleanSchemaStateTest extends \PHPUnit_Framework_Testcase{
 		$instance->setModel($model);
 
 		$model->shouldReceive('setState')
-			->with(m::type('switch5php\model\SchemaSettedState'))
+			->with(m::type('switch5\modelmapping\SchemaSettedState'))
 			->times(1);
 
 		$assert = $this;
 
 		$instance->resolve_call(
-			'setStrategy',
+			'setSchema',
 			array(
 			function($m) use($assert,$instance){
 				$assert->assertEquals($m,$instance);	

@@ -1,5 +1,5 @@
 <?php
-namespace switch5php\model;
+namespace switch5\modelmapping;
 require_once 'validations.php';
 use \switch5\validations as v;
 class Persistence{

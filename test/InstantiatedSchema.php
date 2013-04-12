@@ -1,5 +1,5 @@
 <?php
-namespace switch5php\model;
+namespace switch5\modelmapping;
 require 'InstantiatedSchema.php';
 class InstantiatedSchemaTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldGetRawArrayAndApplyToIt(){

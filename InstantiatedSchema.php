@@ -1,6 +1,6 @@
 <?php
-namespace switch5php\model;
-require 'validations.php';
+namespace switch5\model;
+require_once 'validations.php';
 use \switch5\validations as v;
 class InstantiatedSchema{
 	public function __construct($schema,$rawModel){

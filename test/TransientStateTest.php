@@ -1,5 +1,5 @@
 <?php
-namespace switch5php\model;
+namespace switch5\modelmapping;
 require_once 'TransientState.php';
 use \Mockery as m;
 class TransientStateTest extends \PHPUnit_Framework_Testcase{
@@ -27,7 +27,10 @@ class TransientStateTest extends \PHPUnit_Framework_Testcase{
 		
 		$m = m::mock('modelm');
 		$r = m::mock('redism');
-		
+		$m->shouldReceive('getRedis')
+			->andReturn($r)
+			->times(1);
+	
 		$instance->setModel($m);
 		$instance->resolve_call('persists',null);
 	}
@@ -65,7 +68,7 @@ class TransientStateTest extends \PHPUnit_Framework_Testcase{
 			->times(1);
 		$m->shouldReceive('getRedis')
 			->andReturn($r)
-			->times(1);
+			->times(2);
 		$instance->setModel($m);
 		$instance->resolve_call('persists',null);
 	}
