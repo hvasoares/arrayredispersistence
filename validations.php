@@ -31,10 +31,13 @@ function ofType($type,$val){
 }
 
 function returnIfMatchSchema($schema,$rawModel){
+	if(!is_array($rawModel))
+		return null;
 	$fn = $schema->validationClosure;
 	notFalse($fn(isArray($rawModel)));
 	return $rawModel;
 }
+
 
 function returnSecondIfNull($first,$second){
 	if($first)
@@ -63,6 +66,7 @@ function isInteger($val){
 function isString($val){
 	if(is_string(notNull($val)))
 		return $val;
+	var_dump($val);
 	throwError("Not a string");
 }
 

@@ -4,6 +4,7 @@ require_once 'SchemaSettedState.php';
 class CleanSchemaState{
 	public function __construct(){
 		$this->schema = new \stdClass;
+		$this->schema->attrs[]='id';
 	}
 	public function setModel($model){$this->model = $model;}
 	private function incrKey($value){
@@ -27,7 +28,7 @@ class CleanSchemaState{
 	}
 
 	private function setSchema(\Closure $fn){
-		$fn($this);
+		$fn($this->model);
 		$this->model->setState(new SchemaSettedState(
 			$this->getSchema()
 		));
@@ -37,5 +38,4 @@ class CleanSchemaState{
 		$this->$method($args[0]);
 	}
 	public function getSchema(){return $this->schema;}
-}
-?>
+}?>

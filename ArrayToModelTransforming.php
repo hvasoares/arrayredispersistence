@@ -1,18 +1,19 @@
-<?php
-namespace switch5\modelmapping;
+<?php namespace switch5\modelmapping;
+require_once 'validations.php';
+use switch5\validations as v;
 class ArrayToModelTransforming{
 	public function __construct($translationStrategy){
 		$this->ts = $translationStrategy;
 	}
 
 	public function arrayToModel($mArray,$model,$reflectionObject){
-		$rf = &$reflectionObject;
-		foreach($mArray as $key=>$val){
+		$rf = $reflectionObject;
+		foreach(v\isArray($mArray) as $key=>$val){
 			if($this->keyIsLoadableProperty($rf,$key)){
 				$this->setValue(
 					$model,
 					$reflectionObject->getProperty($this->ts->arrayToProperty($key)),
-					$val
+					v\isString(print_r($val,true))
 				);
 			}	
 		}		

@@ -13,20 +13,38 @@ require_once 'Persistence.php';
 require_once 'Repository.php';
 require_once 'SchemaSettedState.php';
 require_once 'TransientState.php';
+require_once 'StateBuilder.php';
+require_once 'ModelProxyState.php';
 
 require_once 'libs/commons/Registry.php';
-use switch5\commom\Repository;
+use switch5\commom\Registry;
 class GlueCode{
-	public function getRegistry(){
-		$reg = new Registry();
+	public function getRegistry($top=null){
+		$reg = new Registry($top);
 
 		$reg['Repository'] = function($r){
 			return new Repository($r);
 		};
 
-		$reg['Model'] = function($r){
-			return new Model();
+
+		$reg['FirstModelState']=function($r){
+			return new CleanSchemaState();
 		};
+
+		$reg['StateBuilder'] = new StateBuilder($reg);
+		$reg['Persistence'] = new Persistence($reg['Redis']);
+
+		$reg['Model'] = function($r){
+			$m = new ModelProxyState(
+				new Model($r['Redis']),
+				function($state) use ($r){
+					return $r['StateBuilder']->build($state);
+				}
+			);
+			$m->setState($r['FirstModelState']);
+			return $m;
+		};
+
 
 		$sm = new DefaultTranslationStrategy();
 

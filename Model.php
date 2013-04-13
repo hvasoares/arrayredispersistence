@@ -3,10 +3,14 @@ namespace switch5\modelmapping;
 require_once 'CleanSchemaState.php';
 class Model{
 	public function __construct($redis){
-		$this->state = new CleanSchemaState();
 		$this->r = $redis;
 	}
-	public function setState($val){$this->state=$val;}
+	public function getRedis(){
+		return $this->r;
+	}
+	public function setState($val){
+		$this->state=$val;
+	}
 	public function setRedisConnection($r){
 		$this->r = $r;
 	}	

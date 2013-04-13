@@ -6,19 +6,25 @@ class RepositoryTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldSaveMappingToAModel(){
 		$model = m::mock('model');
 		$mapper = m::mock('mapper');
-
-
-		$model->shouldReceive('save')
-			->with('mapper_result')
+		$mapperResultArray = array();
+		$anyObj = $this->createDomainObj($model,null);
+		$model->shouldReceive('persists')
+			->with(array())
+			->andReturn('new_id')
 			->times(1);
 		$mapper->shouldReceive('getArray')
-			->with('anyObj')
-			->andReturn('mapper_result')
+			->with($anyObj)
+			->andReturn(array())
 			->times(1);
-
-		$inst = $this->createInstance($model,$mapper,m::mock('strategy'));
-
-		$inst->save('anyObj');
+		$mapper->shouldReceive('arrayToModel')
+			->with($anyObj,array('id'=>'new_id'))
+			->times(1);
+		$sm =m::mock('strategy1');
+		$this->createInstance(
+				$model,
+				$mapper,
+				$sm
+		)->save($anyObj);
 	}	
 	private function createInstance($model,$mapper,$sm){
 		$inst = new Repository(array(
@@ -28,38 +34,54 @@ class RepositoryTest extends \PHPUnit_Framework_Testcase{
 
 		$sm->shouldReceive('getSchemaClosure')
 			->andReturn('anschema')
-			->times(1);
+			->atLeast(1);
 
 		$model->shouldReceive('setSchema')
 			->with('anschema')
-			->times(1);
+			->atLeast(1);
 		$inst->setStrategy($sm);
 		return $inst;
 	}
-	public function testFind(){
-		$model = m::mock('model');
-		$mapper = m::mock('mapper');
-		
-		$sm = m::mock('strategy');
+
+	public function createDomainObj($model,$id=null){
+		$anyObj = m::mock('obj');
+		$anyObj->shouldReceive('id')
+			->andReturn($id)
+			->times($id?2:1);
+		if($id)
+			$this->modelFind($model,$id);
+		else
+			$model->shouldReceive('newOne')
+				->times(1);
+		return $anyObj;
+	
+	}
+
+	private function modelFind($model,$id){
+		$model->shouldReceive('find')
+			->with($id)
+			->andReturn('bd_result')
+			->times(1);
+	
+	}
+	private function findBehaviour($id,$model,$mapper,$sm,$inst=null){
 		$sm->shouldReceive('createNewModel')
 			->andReturn(
 				'newObject'
 			)
 			->times(1);
-
-		$model->shouldReceive('find')
-			->with(1)
-			->andReturn('bd_result')
-			->times(1);
+		$this->modelFind($model,$id);
 		$mapper->shouldReceive('arrayToModel')
 			->with('newObject','bd_result')
 			->andReturn('mapper_result')
 			->times(1);
-
-		$inst = $this->createInstance($model,$mapper,$sm);
-		$inst->setStrategy($sm);
+		if(!$inst)
+			$inst = $this->createInstance($model,$mapper,$sm);
+		return $inst;
+	}
+	public function testFind(){
+		$inst = $this->findBehaviour(1,m::mock('model'),m::mock('mapper'),m::mock('strategy'));
 		$inst->find(1);
-
 	}
 }
 ?>

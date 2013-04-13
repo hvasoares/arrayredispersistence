@@ -8,16 +8,26 @@ class Repository{
 		$this->s=$val;
 	}
 	public function find($id){
-		return	$this->r['Mapper']->arrayToModel(
-			$this->s->createNewModel(),
+		return	$this->findInto($id,$this->s->createNewModel());
+	}
+
+	private function findInto($id,$destObj){
+		return $this->r['Mapper']->arrayToModel(
+			$destObj,
 			$this->getModel()->find($id)
 		);
 	}
 
 	public function save($obj){
-		$this->getModel()->save(
-			$this->r['Mapper']->getArray($obj)
-		);
+		$m = $this->getModel();
+		if($obj->id())
+			$m->find($obj->id());
+		else
+			$m->newOne();
+		$objArray =$this->r['Mapper']->getArray($obj);
+		$id = $m->persists($objArray);
+		$objArray['id']=$id;
+		$this->r['Mapper']->arrayToModel($obj,$objArray);
 	}
 
 	private function getModel(){

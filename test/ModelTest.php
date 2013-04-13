@@ -8,14 +8,12 @@ class ModelTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldBuildAModelFromAStrategy(){
 		$r = m::mock('redism');
 		$s = m::mock('state');
+		$instance = new Model($r);
 
 		$s->shouldReceive('resolve_call')
 			->with('a_method',array(1,2))
 			->andReturn('aresult')
 			->times(1);
-
-		$instance = new Model($r);
-
 		$instance->setState($s);
 
 		$this->assertEquals(

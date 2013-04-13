@@ -16,22 +16,23 @@ class CleanSchemaStateTest extends \PHPUnit_Framework_Testcase{
 
 		$assert = $this;
 
+		$calls = array(
+			'incrKey' => 'incrKey1',
+			'attr' => 'attr1',
+			'modelName' => 'amodel',
+			'setValidationClosure'=> function($v){}
+		);
+
+		foreach($calls as $method=>$arg)
+			$instance->resolve_call(
+				$method,array($arg)
+			);			
+
 		$instance->resolve_call(
 			'setSchema',
 			array(
-			function($m) use($assert,$instance){
-				$assert->assertEquals($m,$instance);	
-				$calls = array(
-					'incrKey' => 'incrKey1',
-					'attr' => 'attr1',
-					'modelName' => 'amodel',
-					'setValidationClosure'=> function($v){}
-				);
-
-				foreach($calls as $method=>$arg)
-					$instance->resolve_call(
-						$method,array($arg)
-					);			
+			function($m) use($assert,$model){
+				$assert->assertEquals($m,$model);	
 			})
 		);
 
@@ -44,7 +45,7 @@ class CleanSchemaStateTest extends \PHPUnit_Framework_Testcase{
 		);
 		$this->assertTrue(is_array($schema->attrs));
 		$this->assertEquals(
-			$schema->attrs,array('attr1')
+			$schema->attrs,array('id','attr1')
 		);
 	}
 }

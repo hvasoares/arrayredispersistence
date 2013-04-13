@@ -2,6 +2,7 @@
 namespace switch5\modelmapping;
 require_once 'validations.php';
 require_once 'TransientState.php';
+require_once 'InstantiatedSchema.php';
 use \switch5\validations as v;
 class SchemaSettedState{
 	public function __construct($schema){
@@ -17,26 +18,25 @@ class SchemaSettedState{
 				"The number $idex is greater than the model key '{$s->incrKey}'=$nowidex"
 			);
 
-		$result = array("id"=>$id);
 
 		foreach($s->attrs as $attr){
 			$attrname = $s->modelName;
 			$attrname.="[$idex]$attr";
-			$result[$attr] = $r->get($attrname);
+			$result[$attr] = ($r->get(
+				v\isString($attrname))
+			);
 		}
-		$this->model->setState(new TransientState($s,$result));
-	}
 
+		$result["id"]=strval($idex);
+		$this->model->setState(new TransientState(
+			new InstantiatedSchema($s,$result)
+		));
+		return v\returnIfMatchSchema($s,$result);
+	}
 	private function newOne(){
-		$this->setState(new TransientState($this->schema));
+		$this->model->setState(new TransientState(new InstantiatedSchema($this->schema)));
 	}
-
-	public function setModel($val){
-		$this->model = $val;
-	}
-
-	public function resolve_call($m,$val){
-		$this->$m($val);
-	}
+	public function setModel($val){$this->model = $val;}
+	public function resolve_call($m,$val){return $this->$m($val);}
 }
 ?>
