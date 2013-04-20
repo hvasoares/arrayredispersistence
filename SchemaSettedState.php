@@ -14,7 +14,7 @@ class SchemaSettedState{
 		$r =$this->model->getRedis();
 		$nowidex = $r->get($s->incrKey);
 		if($nowidex < $idex)
-			throw new Exception(
+			throw new \Exception(
 				"The number $idex is greater than the model key '{$s->incrKey}'=$nowidex"
 			);
 
