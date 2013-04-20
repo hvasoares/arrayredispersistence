@@ -1,3 +1,6 @@
 [submodule "libs/commons"]
 	path = libs/commons
 	url = https://hvasoares.unfuddle.com/git/hvasoares_switch5phpcommons
+[submodule "libs/validations"]
+	path = libs/validations
+	url = https://hvasoares.unfuddle.com/git/hvasoares_switch5phpvalidations
