@@ -1,6 +1,6 @@
 <?php
 namespace switch5\modelmapping;
-require_once 'validations.php';
+require_once __DIR__.'/validations.php';
 require_once 'TransientState.php';
 require_once 'InstantiatedSchema.php';
 use \switch5\validations as v;
