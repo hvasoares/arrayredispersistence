@@ -1,6 +1,7 @@
 <?
 namespace switch5\validations;
-require_once 'libs/validations/validations.php';
+if(!class_exists('switch5\validations\ValidationException'))
+	require_once 'libs/validations/validations.php';
 
 function returnIfMatchSchema($schema,$rawModel){
 	if(!is_array($rawModel))
