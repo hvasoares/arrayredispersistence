@@ -16,7 +16,7 @@ require_once 'TransientState.php';
 require_once 'StateBuilder.php';
 require_once 'ModelProxyState.php';
 if(!class_exists('switch5\commom\Registry'))
-	require_once 'libs/commons/Registry.php';
+	require_once '../commom/Registry.php';
 use switch5\commom\Registry;
 class GlueCode{
 	public function getRegistry($top=null){

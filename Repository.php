@@ -6,6 +6,7 @@ class Repository{
 	}
 	public function setStrategy($val){
 		$this->s=$val;
+		$this->getModel();
 	}
 	public function find($id){
 		return	$this->findInto($id,$this->s->createNewModel());
