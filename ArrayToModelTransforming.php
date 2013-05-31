@@ -9,11 +9,11 @@ class ArrayToModelTransforming{
 	public function arrayToModel($mArray,$model,$reflectionObject){
 		$rf = $reflectionObject;
 		foreach(v\isArray($mArray) as $key=>$val){
-			if($this->keyIsLoadableProperty($rf,$key)){
+			if($val&&$this->keyIsLoadableProperty($rf,$key)){
 				$this->setValue(
 					$model,
 					$reflectionObject->getProperty($this->ts->arrayToProperty($key)),
-					v\isString(print_r($val,true))
+					is_object($val)?$val:print_r($val,true)
 				);
 			}	
 		}		
