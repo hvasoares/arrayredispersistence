@@ -6,8 +6,8 @@ class InstantiatedSchemaTest extends \PHPUnit_Framework_Testcase{
 		$instance = new InstantiatedSchema(
 			mockSchema(),
 			array_combine(
-				mockSchema()->attrs,
-				array('v1','v2')
+				array('attr1','attr2','attr3'),
+				array('v1','v2','v3')
 			)
 		);
 

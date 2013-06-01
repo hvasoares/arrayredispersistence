@@ -23,17 +23,13 @@ class InstantiatedSchema{
 		$attrs = $this->attrs;
 		$id = $this->getId();
 		unset($attrs['id']);
-
-		return array_combine(
-			array_map(
-				function($attr) use($id,$model,$attrs){
-					return "$model"."[".$id."]$attr";
-				},
-				array_keys($attrs)
-			),
-			array_values($attrs)
-		);
-
+		$result = array();
+		foreach($this->schema->attrs as $sattr){
+			$key = "$model"."[".$id."]$sattr";
+			$result[$key] = $this->attrs[$sattr];
+	
+		}
+		return $result;	
 	}
 }
 ?>
