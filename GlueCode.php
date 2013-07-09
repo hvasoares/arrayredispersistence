@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 
 require_once 'TranslationStrategy.php';
 require_once 'ArrayToModelTransforming.php';
@@ -16,7 +16,7 @@ require_once 'TransientState.php';
 require_once 'StateBuilder.php';
 require_once 'ModelProxyState.php';
 if(!class_exists('hvasoares\commom\Registry'))
-	require_once '../commom/Registry.php';
+	require_once 'vendor/hvasoares/commons/Registry.php';
 use hvasoares\commom\Registry;
 class GlueCode{
 	public function getRegistry($top=null){

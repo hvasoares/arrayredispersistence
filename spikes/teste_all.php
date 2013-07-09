@@ -1,7 +1,7 @@
 <?php
 require_once 'GlueCode.php';
-use switch5\commom\Registry;
-use switch5\modelmapping\GlueCode;
+use hvasoares\commom\Registry;
+use hvasoares\arrayredispersistence\GlueCode;
 $registry = new Registry();
 $registry['Redis'] = new Redis();
 $registry['Redis']->connect("127.0.0.1");

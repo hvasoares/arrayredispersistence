@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require 'InstantiatedSchema.php';
 class InstantiatedSchemaTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldGetRawArrayAndApplyToIt(){

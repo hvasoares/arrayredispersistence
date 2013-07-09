@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 
 require 'ArrayToModelTransforming.php';
 use \Mockery as m;

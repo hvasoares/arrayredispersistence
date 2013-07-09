@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'TransientState.php';
 require_once 'InstantiatedSchema.php';
 use \Mockery as m;
@@ -9,7 +9,7 @@ class TransientStateTest extends \PHPUnit_Framework_Testcase{
 		$instance->resolve_call('persists',array('values'));
 	}
 	private function baseGiven($m,$id){
-		$si = m::mock("hvasoares\modelmapping\InstantiatedSchema");
+		$si = m::mock("hvasoares\arrayredispersistence\InstantiatedSchema");
 		$si->shouldReceive('setAttrs')
 			->with('values')
 			->times(1);

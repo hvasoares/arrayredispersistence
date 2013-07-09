@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'SchemaSettedState.php';
 use \Mockery as m;
 class SchemaSettedStateTest extends \PHPUnit_Framework_Testcase{
@@ -18,7 +18,7 @@ class SchemaSettedStateTest extends \PHPUnit_Framework_Testcase{
 			->andReturn($r)
 			->times(1);
 		$m->shouldReceive('setState')
-			->with(m::type('hvasoares\modelmapping\TransientState'))
+			->with(m::type('hvasoares\arrayredispersistence\TransientState'))
 			->times(1);
 
 		$instance = new SchemaSettedState($s);

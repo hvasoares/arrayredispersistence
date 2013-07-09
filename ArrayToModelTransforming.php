@@ -1,4 +1,4 @@
-<?php namespace hvasoares\modelmapping;
+<?php namespace hvasoares\arrayredispersistence;
 require_once 'validations.php';
 use hvasoares\validations as v;
 class ArrayToModelTransforming{

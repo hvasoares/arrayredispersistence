@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "fde5b22d03df726a66935f7d0108c312",
+    "hash": "db9e3eb9e43c327d83ba65e8d736b29d",
     "packages": [
         {
             "name": "hvasoares/commons",
-            "version": "1.0.2",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hvasoares/commons.git",
-                "reference": "1.0.2"
+                "reference": "1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hvasoares/commons/zipball/1.0.2",
-                "reference": "1.0.2",
+                "url": "https://api.github.com/repos/hvasoares/commons/zipball/1.0.4",
+                "reference": "1.0.4",
                 "shasum": ""
             },
             "type": "library",
@@ -31,10 +31,10 @@
             ],
             "description": "my commons classes used in so many projects",
             "support": {
-                "source": "https://github.com/hvasoares/commons/tree/1.0.2",
+                "source": "https://github.com/hvasoares/commons/tree/1.0.4",
                 "issues": "https://github.com/hvasoares/commons/issues"
             },
-            "time": "2013-07-06 03:13:35"
+            "time": "2013-07-09 01:05:38"
         },
         {
             "name": "hvasoares/validations",

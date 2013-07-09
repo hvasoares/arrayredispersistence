@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'validations.php';
 use \hvasoares\validations as v;
 class InstantiatedSchema{

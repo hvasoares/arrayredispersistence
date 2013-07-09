@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'TransientState.php';
 class StateBuilder{
 	public function __construct($registry){

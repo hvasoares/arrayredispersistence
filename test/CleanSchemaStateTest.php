@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require 'CleanSchemaState.php';
 use \Mockery as m;
 
@@ -11,7 +11,7 @@ class CleanSchemaStateTest extends \PHPUnit_Framework_Testcase{
 		$instance->setModel($model);
 
 		$model->shouldReceive('setState')
-			->with(m::type('hvasoares\modelmapping\SchemaSettedState'))
+			->with(m::type('hvasoares\arrayredispersistence\SchemaSettedState'))
 			->times(1);
 
 		$assert = $this;

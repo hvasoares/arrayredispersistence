@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once __DIR__.'/validations.php';
 require_once 'TransientState.php';
 require_once 'InstantiatedSchema.php';
