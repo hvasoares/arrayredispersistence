@@ -1,7 +1,7 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'validations.php';
-use \switch5\validations as v;
+use \hvasoares\validations as v;
 class Persistence{
 	public function __construct($r){
 		$this->r =$r;

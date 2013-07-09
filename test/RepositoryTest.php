@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require 'Repository.php';
 use \Mockery as m;
 class RepositoryTest extends \PHPUnit_Framework_Testcase{

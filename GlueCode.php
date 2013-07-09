@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 
 require_once 'TranslationStrategy.php';
 require_once 'ArrayToModelTransforming.php';
@@ -15,9 +15,9 @@ require_once 'SchemaSettedState.php';
 require_once 'TransientState.php';
 require_once 'StateBuilder.php';
 require_once 'ModelProxyState.php';
-if(!class_exists('switch5\commom\Registry'))
+if(!class_exists('hvasoares\commom\Registry'))
 	require_once '../commom/Registry.php';
-use switch5\commom\Registry;
+use hvasoares\commom\Registry;
 class GlueCode{
 	public function getRegistry($top=null){
 		$reg = new Registry($top);

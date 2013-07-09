@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 class Mapper{
 	public function __construct($bdToModel,$modelToDb){
 		$this->bm = $bdToModel;

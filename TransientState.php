@@ -1,8 +1,8 @@
 <?
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'validations.php';
 require_once 'InstantiatedSchema.php';
-use \switch5\validations as v;
+use \hvasoares\validations as v;
 class TransientState{
 	public function __construct(InstantiatedSchema $is){
 		$this->schemaI = $is;

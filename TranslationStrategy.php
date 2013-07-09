@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 interface TranslationStrategy{
 	public function shouldSave($propertyName);
 	public function propertyToArray($propertyName);

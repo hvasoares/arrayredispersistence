@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 interface ModelInterface{
 	public function getRedis();
 	public function setState($val);

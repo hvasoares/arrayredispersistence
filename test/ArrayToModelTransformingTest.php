@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 
 require 'ArrayToModelTransforming.php';
 use \Mockery as m;

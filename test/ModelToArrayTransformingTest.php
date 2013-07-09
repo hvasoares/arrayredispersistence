@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require 'ModelToArrayTransforming.php';
 use \Mockery as m;
 class ModelToArrayTransformingTest extends \PHPUnit_Framework_Testcase{

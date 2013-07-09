@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'TransientState.php';
 class StateBuilder{
 	public function __construct($registry){

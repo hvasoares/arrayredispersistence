@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'StateBuilder.php';
 use \Mockery as m;
 class StateBuilderTest extends \PHPUnit_Framework_Testcase{
@@ -8,7 +8,7 @@ class StateBuilderTest extends \PHPUnit_Framework_Testcase{
 			'Persistence' => 'p'
 		));
 		$transientState = m::mock(
-			'switch5\modelmapping\TransientState'
+			'hvasoares\modelmapping\TransientState'
 		);	
 		$transientState->shouldReceive('setPersistence')
 			->with('p')

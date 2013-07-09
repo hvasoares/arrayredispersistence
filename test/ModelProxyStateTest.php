@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'ModelProxyState.php';
 require_once 'ModelInterface.php';
 use \Mockery as m;

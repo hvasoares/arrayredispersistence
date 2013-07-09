@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'CleanSchemaState.php';
 class Model{
 	public function __construct($redis){

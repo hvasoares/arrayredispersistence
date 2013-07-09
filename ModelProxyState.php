@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require 'ModelInterface.php';
 class ModelProxyState implements ModelInterface{
 	public function __construct($innerModel,$stateClosure){

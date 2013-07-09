@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'SchemaSettedState.php';
 use \Mockery as m;
 class SchemaSettedStateTest extends \PHPUnit_Framework_Testcase{
@@ -18,7 +18,7 @@ class SchemaSettedStateTest extends \PHPUnit_Framework_Testcase{
 			->andReturn($r)
 			->times(1);
 		$m->shouldReceive('setState')
-			->with(m::type('switch5\modelmapping\TransientState'))
+			->with(m::type('hvasoares\modelmapping\TransientState'))
 			->times(1);
 
 		$instance = new SchemaSettedState($s);

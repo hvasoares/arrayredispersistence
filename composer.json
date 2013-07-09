@@ -1,0 +1,27 @@
+{
+    "name": "hvasoares/modelmapping",
+    "require-dev": {
+        "phpunit/phpunit": "3.7.1"
+    },
+    "authors": [
+        {
+            "name": "Hugo Vinícius Alves Soares",
+            "email": "hvasoares@gmail.com"
+        }
+    ],
+	    "repositories":[
+		{
+			"type":"vcs",
+			"url" : "https://github.com/hvasoares/commons"
+		},
+		{
+			"type":"vcs",
+			"url" : "https://github.com/hvasoares/validations"
+		}
+
+    ],
+    "require": {
+	"hvasoares/commons": "1.0.2@dev"	,
+	"hvasoares/validations": "1.0.0"
+	}
+}

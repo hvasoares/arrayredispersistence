@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'Persistence.php';
 use \Mockery as m;
 class PersistenceTest extends \PHPUnit_Framework_Testcase{

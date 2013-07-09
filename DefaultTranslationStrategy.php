@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'TranslationStrategy.php';
 class DefaultTranslationStrategy implements TranslationStrategy{
 	public function shouldSave($attr){

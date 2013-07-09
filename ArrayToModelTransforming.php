@@ -1,6 +1,6 @@
-<?php namespace switch5\modelmapping;
+<?php namespace hvasoares\modelmapping;
 require_once 'validations.php';
-use switch5\validations as v;
+use hvasoares\validations as v;
 class ArrayToModelTransforming{
 	public function __construct($translationStrategy){
 		$this->ts = $translationStrategy;

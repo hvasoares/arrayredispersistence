@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'DefaultTranslationStrategy.php';
 class DefaultTranslationStrategyTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldNotSaveTransient(){

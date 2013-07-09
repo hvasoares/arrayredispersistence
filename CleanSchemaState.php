@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'SchemaSettedState.php';
 class CleanSchemaState{
 	public function __construct(){

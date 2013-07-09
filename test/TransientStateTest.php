@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'TransientState.php';
 require_once 'InstantiatedSchema.php';
 use \Mockery as m;
@@ -9,7 +9,7 @@ class TransientStateTest extends \PHPUnit_Framework_Testcase{
 		$instance->resolve_call('persists',array('values'));
 	}
 	private function baseGiven($m,$id){
-		$si = m::mock("switch5\modelmapping\InstantiatedSchema");
+		$si = m::mock("hvasoares\modelmapping\InstantiatedSchema");
 		$si->shouldReceive('setAttrs')
 			->with('values')
 			->times(1);

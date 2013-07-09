@@ -1,9 +1,9 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once __DIR__.'/validations.php';
 require_once 'TransientState.php';
 require_once 'InstantiatedSchema.php';
-use \switch5\validations as v;
+use \hvasoares\validations as v;
 class SchemaSettedState{
 	public function __construct($schema){
 		$this->schema = v\returnIfIsSchema($schema);

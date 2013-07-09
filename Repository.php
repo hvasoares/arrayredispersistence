@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 class Repository{
 	public function __construct($registry){
 		$this->r = $registry;

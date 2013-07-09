@@ -1,5 +1,5 @@
 <?php
-namespace switch5\modelmapping;
+namespace hvasoares\modelmapping;
 require_once 'Mapper.php';
 use \Mockery as m;
 class MapperTest extends \PHPUnit_Framework_Testcase{
