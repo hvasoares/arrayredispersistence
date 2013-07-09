@@ -1,5 +1,5 @@
 {
-    "name": "hvasoares/modelmapping",
+    "name": "hvasoares/ArrayRedisPersistence",
     "require-dev": {
         "phpunit/phpunit": "3.7.1"
     },
@@ -9,8 +9,8 @@
             "email": "hvasoares@gmail.com"
         }
     ],
-	    "repositories":[
-		{
+    "repositories":[
+	{
 			"type":"vcs",
 			"url" : "https://github.com/hvasoares/commons"
 		},
