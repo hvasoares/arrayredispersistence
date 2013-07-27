@@ -4,7 +4,7 @@ set_include_path(
 	        . PATH_SEPARATOR . get_include_path()
 	);
 
-require_once 'Mockery/Loader.php';
+require_once '../../../vendor/autoload.php';
 
 $loader = new \Mockery\Loader;
 $loader->register();

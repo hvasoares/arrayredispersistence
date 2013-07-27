@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "db9e3eb9e43c327d83ba65e8d736b29d",
+    "hash": "c050c33a8d008812a2d40ec3122e8965",
     "packages": [
         {
             "name": "hvasoares/commons",
@@ -20,8 +20,13 @@
                 "shasum": ""
             },
             "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "hvasoares\\commons\\": "src/"
+                }
+            },
             "license": [
-                "oss"
+                "mpl"
             ],
             "authors": [
                 {
@@ -31,10 +36,10 @@
             ],
             "description": "my commons classes used in so many projects",
             "support": {
-                "source": "https://github.com/hvasoares/commons/tree/1.0.4",
+                "source": "https://github.com/hvasoares/commons/tree/master",
                 "issues": "https://github.com/hvasoares/commons/issues"
             },
-            "time": "2013-07-09 01:05:38"
+            "time": "2013-07-13 06:30:24"
         },
         {
             "name": "hvasoares/validations",
@@ -51,6 +56,19 @@
                 "shasum": ""
             },
             "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "\\hvasoares\\validations": "src/"
+                },
+                "files": [
+                    "src/hvasoares/validations/arrays.php",
+                    "src/hvasoares/validations/boolean.php",
+                    "src/hvasoares/validations/reflection.php",
+                    "src/hvasoares/validations/scalar.php",
+                    "src/hvasoares/validations/validations.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "oss"
             ],
@@ -61,14 +79,63 @@
                 }
             ],
             "description": "custom validations function",
-            "support": {
-                "source": "https://github.com/hvasoares/validations/tree/1.0.0",
-                "issues": "https://github.com/hvasoares/validations/issues"
-            },
-            "time": "2013-07-07 14:08:03"
+            "time": "2013-07-27 02:39:12"
         }
     ],
     "packages-dev": [
+        {
+            "name": "mockery/mockery",
+            "version": "0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/padraic/mockery.git",
+                "reference": "0.8.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/0.8.0",
+                "reference": "0.8.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "hamcrest/hamcrest": "1.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mockery": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Pádraic Brady",
+                    "email": "padraic.brady@gmail.com",
+                    "homepage": "http://blog.astrumfutura.com"
+                }
+            ],
+            "description": "Mockery is a simple yet flexible PHP mock object framework for use in unit testing with PHPUnit, PHPSpec or any other testing framework. Its core goal is to offer a test double framework with a succint API capable of clearly defining all possible object operations and interactions using a human readable Domain Specific Language (DSL). Designed as a drop in alternative to PHPUnit's phpunit-mock-objects library, Mockery is easy to integrate with PHPUnit and can operate alongside phpunit-mock-objects without the World ending.",
+            "homepage": "http://github.com/padraic/mockery",
+            "keywords": [
+                "BDD",
+                "TDD",
+                "library",
+                "mock",
+                "mock objects",
+                "mockery",
+                "stub",
+                "test",
+                "test double",
+                "testing"
+            ],
+            "time": "2013-04-01 12:13:17"
+        },
         {
             "name": "phpunit/php-code-coverage",
             "version": "1.2.12",
@@ -430,17 +497,17 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.3.1",
+            "version": "v2.3.2",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "v2.3.1"
+                "reference": "v2.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/v2.3.1",
-                "reference": "v2.3.1",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/v2.3.2",
+                "reference": "v2.3.2",
                 "shasum": ""
             },
             "require": {
@@ -473,16 +540,16 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2013-05-10 18:12:13"
+            "time": "2013-07-11 19:36:36"
         }
     ],
     "aliases": [
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "hvasoares/commons": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": [
 
     ],

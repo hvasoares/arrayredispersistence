@@ -1,7 +1,5 @@
 <?
 namespace hvasoares\validations;
-if(!class_exists('vendor\validations\ValidationException'))
-	require_once 'vendor/hvasoares/validations/validations.php';
 
 function returnIfMatchSchema($schema,$rawModel){
 	if(!is_array($rawModel))
