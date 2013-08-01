@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require 'ModelInterface.php';
 class ModelProxyState implements ModelInterface{
 	public function __construct($innerModel,$stateClosure){

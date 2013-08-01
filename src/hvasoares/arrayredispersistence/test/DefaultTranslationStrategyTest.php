@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'DefaultTranslationStrategy.php';
 class DefaultTranslationStrategyTest extends \PHPUnit_Framework_Testcase{
 	public function testShouldNotSaveTransient(){

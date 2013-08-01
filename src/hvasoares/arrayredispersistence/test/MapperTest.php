@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'Mapper.php';
 use \Mockery as m;
 class MapperTest extends \PHPUnit_Framework_Testcase{

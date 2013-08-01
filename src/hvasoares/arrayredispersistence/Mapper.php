@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 class Mapper{
 	public function __construct($bdToModel,$modelToDb){
 		$this->bm = $bdToModel;

@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'TranslationStrategy.php';
 class ModelToArrayTransforming{
 	public function __construct($translationStrategy){

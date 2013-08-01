@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'CleanSchemaState.php';
 class Model{
 	public function __construct($redis){

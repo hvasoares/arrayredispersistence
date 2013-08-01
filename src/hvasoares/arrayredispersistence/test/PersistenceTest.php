@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'Persistence.php';
 use \Mockery as m;
 class PersistenceTest extends \PHPUnit_Framework_Testcase{

@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 interface ModelInterface{
 	public function getRedis();
 	public function setState($val);

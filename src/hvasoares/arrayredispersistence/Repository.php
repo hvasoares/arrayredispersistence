@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 class Repository{
 	public function __construct($registry){
 		$this->r = $registry;

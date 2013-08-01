@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 interface TranslationStrategy{
 	public function shouldSave($propertyName);
 	public function propertyToArray($propertyName);

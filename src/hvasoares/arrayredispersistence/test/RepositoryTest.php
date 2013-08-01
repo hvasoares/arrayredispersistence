@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require 'Repository.php';
 use \Mockery as m;
 class RepositoryTest extends \PHPUnit_Framework_Testcase{

@@ -1,5 +1,5 @@
 <?php
-namespace hvasoares\modelmapping;
+namespace hvasoares\arrayredispersistence;
 require_once 'ModelProxyState.php';
 require_once 'ModelInterface.php';
 use \Mockery as m;
