@@ -1,5 +1,7 @@
 {
    "name": "hvasoares/array-redis-persistence",
+   "description": "please use the hvasoares\\RedisModelMapping",
+   "license" : "MIT",
     "require-dev": {
         "phpunit/phpunit": "3.7.1",
         "mockery/mockery": "0.8.0"
@@ -14,6 +16,6 @@
 	"hvasoares/commons": "1.0.4"	,
 	"hvasoares/validations": "1.0.0"
 	},
-    "autoload":{"psr-0":{'hvasoares\\arrayredispersistence\\':'src/'}}
+    "autoload":{"psr-0":{"hvasoares\\arrayredispersistence\\":"src/"}}
 
 }
