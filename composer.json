@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-	"hvasoares/commons": "1.x"	,
+	"hvasoares/commons": "1.*"	,
 	"hvasoares/validations": "1.0.0"
 	},
     "autoload":{"psr-0":{"hvasoares\\arrayredispersistence\\":"src/"}}
